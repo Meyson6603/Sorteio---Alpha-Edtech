@@ -18,7 +18,6 @@ header {
 }
 
 header nav {
-  height: 50%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -27,6 +26,7 @@ header nav {
 }
 
 nav a {
+  flex: 1;
   text-decoration: none;
   color: white;
 }
@@ -75,11 +75,14 @@ nav a {
   height: 50%;
   width: auto;
   border: 2px solid black;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .option {
   border-bottom: 2px solid black;
-  height: 33.333%;
+  flex: 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
