@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: #EEEEEE;
+
+}
+
+header {
+    height: 100%;
+    width: 10%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#main {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#block {
+    height: 60%;
+    width: 80%;
+    background-color: darkgreen;
+    border-radius: 30px;
+    display: flex;
+}
+
+#blockp1 {
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(12, 80, 57);
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+#blockp1 h1 {
+    font-size: 50px;
+}
+
+#blockp2 {
+    color: black;
+    padding: 20px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#choices {
+    height: 50%;
+    width: 50%;
+    border: 2px solid black;
+}
+
+.option {
+    border-bottom: 2px solid black;
+    height: 33.333%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
