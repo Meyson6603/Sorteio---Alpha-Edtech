@@ -17,10 +17,10 @@
   --primary-color6:#9A40B9;
 
   --second-color1:#777777;
-  --second-color1:#86BCAB;
-  --second-color1:#171717;
-  --second-color1:#0C5039;
-  --second-color1:#7F7FED;
+  --second-color2:#86BCAB;
+  --second-color3:#171717;
+  --second-color4:#0C5039;
+  --second-color5:#7F7FED;
 }
 
 /* ======== Reset ======== */
@@ -35,13 +35,13 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
-  background-color: #eeeeee;
+  background-color: var(--bg-color3);
   flex-wrap: wrap;
 }
 
 header {
   flex: 1;
-  background-color: black;
+  background-color: var(--bg-color2)
 }
 
 /* ======== Menu Desktop ======== */
@@ -60,7 +60,7 @@ header {
 }
 
 .nav-desktop a:hover {
-  color: lightgreen;
+  color: var(--primary-color1);
   transform: scale(1.1);
 }
 
@@ -77,14 +77,14 @@ header {
   background: none;
   border: none;
   cursor: pointer;
-  color: rgb(12, 80, 57);
+  color: var(--primary-color2);
 }
 
 .mobile-menu {
   display: none;
   flex-direction: column;
   gap: 10px;
-  background-color: black;
+  background-color: var(--bg-color2);
   padding: 10px;
   position: absolute;
   top: 60px;
@@ -93,7 +93,7 @@ header {
 }
 
 .mobile-menu a {
-  color: white;
+  color: var(--bg-color1);
   text-decoration: none;
   padding: 10px;
   display: flex;
@@ -124,7 +124,7 @@ header {
   color: white;
   padding: 20px;
   border-radius: 30px 0 0 30px;
-  background-color: rgb(12, 80, 57);
+  background-color: var(--second-color4);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -138,13 +138,12 @@ header {
 #blockp2 {
   flex: 1;
   border-radius: 0 30px 30px 0;
-  background-color: white;
+  background-color: var(--bg-color1);
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   justify-content: center;
-  border: 3px solid rgb(12, 80, 57);
 }
 
 #choices {
@@ -163,11 +162,11 @@ header {
 #choices > div:hover {
   transform: scale(1.1);
   padding: 3.5px;
-  border-color: lightgreen;
+  border-color: var(--primary-color1);
 }
 
 .option {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--second-color3);
   flex: 1;
   display: flex;
   justify-content: space-around;
@@ -195,7 +194,7 @@ header {
 
   header::before {
     content: "Alpha Sorte";
-    color: whitesmoke;
+    color: var(--bg-color3);
     position: absolute;
     bottom: 27px;
     left: 23px;
@@ -238,7 +237,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--second-color3);
   }
 }
 
@@ -280,7 +279,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--second-color3);
   }
 }
 
