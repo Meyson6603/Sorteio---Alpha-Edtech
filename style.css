@@ -1,12 +1,14 @@
+/* ======== Reset ======== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ======== Estilização Geral ======== */
 body {
-  min-height: 100lvh;
-  min-width: 100lvw;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   background-color: #eeeeee;
   flex-wrap: wrap;
@@ -17,7 +19,8 @@ header {
   background-color: black;
 }
 
-header nav {
+/* ======== Menu Desktop ======== */
+.nav-desktop {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -25,12 +28,59 @@ header nav {
   align-items: center;
 }
 
-nav a {
-  flex: 1;
+.nav-desktop a {
   text-decoration: none;
   color: white;
+  transition: all 150ms ease-in;
 }
 
+.nav-desktop a:hover {
+  color: lightgreen;
+  transform: scale(1.1);
+}
+
+/* ======== Menu Mobile ======== */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  position: relative;
+}
+
+#menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(12, 80, 57);
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background-color: black;
+  padding: 10px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mobile-menu.show {
+  display: flex;
+}
+
+/* ======== Bloco Principal ======== */
 #main {
   flex: 12;
   display: flex;
@@ -42,6 +92,7 @@ nav a {
   height: 60%;
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 #blockp1 {
@@ -74,10 +125,20 @@ nav a {
 #choices {
   height: 50%;
   width: auto;
-  border: 2px solid black;
-
   display: flex;
   flex-direction: column;
+  gap: 3px;
+}
+
+#choices > div {
+  border: 2px solid black;
+  transition: all 150ms ease-in;
+}
+
+#choices > div:hover {
+  transform: scale(1.1);
+  padding: 3.5px;
+  border-color: lightgreen;
 }
 
 .option {
@@ -86,4 +147,138 @@ nav a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+/* ======== Responsividade ======== */
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  header {
+    position: relative;
+  }
+
+  header::before {
+    content: "Alpha Sorte";
+    color: whitesmoke;
+    position: absolute;
+    bottom: 27px;
+    left: 23px;
+  }
+
+  #block {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+  }
+
+  #blockp1 {
+    border-radius: 20px 20px 0 0 !important;
+    padding: 15px !important;
+    text-align: center;
+  }
+
+  #blockp1 h1 {
+    font-size: 28px;
+  }
+
+  #blockp2 {
+    border-radius: 0 0 20px 20px !important;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #choices {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option {
+    padding: 12px;
+    font-size: 14px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+  }
+}
+
+/* Celulares maiores (até 768px) */
+@media (max-width: 768px) {
+  #block {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  #blockp1 {
+    border-radius: 20px 20px 0 0 !important;
+    padding: 15px !important;
+    text-align: center;
+  }
+
+  #blockp1 h1 {
+    font-size: 28px;
+  }
+
+  #blockp2 {
+    border-radius: 0 0 20px 20px !important;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #choices {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option {
+    padding: 12px;
+    font-size: 14px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+  }
+}
+
+@media (max-width: 1024px) {
+  #block {
+    width: 90%;
+  }
+
+  #blockp1 h1 {
+    font-size: 40px;
+  }
+
+  .option {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1366px) {
+  #block {
+    width: 85%;
+  }
+
+  #blockp1 h1 {
+    font-size: 45px;
+  }
 }

@@ -1,53 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorteio Alpha Edtech</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="
-        https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=block" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="
+        https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=block"
+      rel="stylesheet"
+    />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <header>
-        <nav>
-            <a href=""><i class="material-symbols-outlined"
-                    style="color: rgb(12, 80, 57);; font-size: 48px;">menu</i></a><a href=""><i
-                    class="material-symbols-outlined" style="font-size: 48px;">home</i></a><a
-                href=""><i class="material-symbols-outlined" style="font-size: 48px;">info</i></a><a href=""><i
-                    class="material-symbols-outlined" style="font-size: 48px;">history</i></a>
-            <a href=""><i class="material-symbols-outlined" style="font-size: 48px;">settings</i></a>
-        </nav>
+      <nav class="nav-desktop">
+        <a href=""
+          ><i
+            class="material-symbols-outlined"
+            style="color: rgb(12, 80, 57); font-size: 48px"
+            >menu</i
+          ></a
+        >
+        <a href=""
+          ><i class="material-symbols-outlined" style="font-size: 48px"
+            >home</i
+          ></a
+        >
+        <a href=""
+          ><i class="material-symbols-outlined" style="font-size: 48px"
+            >info</i
+          ></a
+        >
+        <a href=""
+          ><i class="material-symbols-outlined" style="font-size: 48px"
+            >history</i
+          ></a
+        >
+        <a href=""
+          ><i class="material-symbols-outlined" style="font-size: 48px"
+            >settings</i
+          ></a
+        >
+      </nav>
+
+      <nav class="nav-mobile">
+        <button id="menu-btn">
+          <i class="material-symbols-outlined" style="font-size: 48px">menu</i>
+        </button>
+        <div class="mobile-menu">
+          <a href="#"><i class="material-symbols-outlined">home</i> Home</a>
+          <a href=""><i class="material-symbols-outlined">info</i> Sobre</a>
+          <a href=""
+            ><i class="material-symbols-outlined">history</i> Histórico</a
+          >
+          <a href=""
+            ><i class="material-symbols-outlined">settings</i> Configurações</a
+          >
+        </div>
+      </nav>
     </header>
 
     <div id="main">
-        <div id="block">
-            <div id="blockp1">
-                <i class="material-symbols-outlined" style="font-size: 70px; color: lightgreen;">casino</i>
-                <h1>Alpha Sorte</h1>
-                <h4>Realize seu sorteio de forma dinâmica e simples. Escolha o tipo de sorteio e a forma que desejar
-                    sortear, nós fazemos todo resto para você.</h4>
-            </div>
-            <div id="blockp2">
-                <h3>O que gostaria de sortear ?</h3>
-                <div id="choices">
-                    <div class="option">
-                        <div>aqui fica a imagem(SVG)</div>Alguma coisa pai
-                    </div>
-                    <div class="option">
-                        <div>aqui fica a imagem(SVG)</div>Alguma coisa pai
-                    </div>
-                    <div class="option">
-                        <div>aqui fica a imagem(SVG)</div>Alguma coisa pai
-                    </div>
-                </div>
-            </div>
+      <div id="block">
+        <div id="blockp1">
+          <i
+            class="material-symbols-outlined"
+            style="font-size: 70px; color: lightgreen"
+            >casino</i
+          >
+          <h1>Alpha Sorte</h1>
+          <h4>
+            Realize seu sorteio de forma dinâmica e simples. Escolha o tipo de
+            sorteio e a forma que desejar sortear, nós fazemos todo resto para
+            você.
+          </h4>
         </div>
+        <div id="blockp2">
+          <h3>O que gostaria de sortear ?</h3>
+          <div id="choices">
+            <div class="option">
+              <div>aqui fica a imagem(SVG)</div>
+              Alguma coisa pai
+            </div>
+            <div class="option">
+              <div>aqui fica a imagem(SVG)</div>
+              Alguma coisa pai
+            </div>
+            <div class="option">
+              <div>aqui fica a imagem(SVG)</div>
+              Alguma coisa pai
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
 
+    <script src="js/script.js"></script>
+  </body>
 </html>
