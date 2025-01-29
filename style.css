@@ -1,3 +1,28 @@
+/* ===== Variáveis ===== */
+
+:root {
+  --bg-color1: #FFFFFF;
+  --bg-color2: #202020;
+  --bg-color3: #EEEEEE;
+
+  --font-color1:#FFFFFF;
+  --font-color2:#202020;
+  --font-color3:#EEEEEE;
+
+  --primary-color1:#4DCCA7;
+  --primary-color2:#00996D;
+  --primary-color3:#2DACE2;
+  --primary-color4:#EBBA3D;
+  --primary-color5:#E5646E;
+  --primary-color6:#9A40B9;
+
+  --second-color1:#777777;
+  --second-color1:#86BCAB;
+  --second-color1:#171717;
+  --second-color1:#0C5039;
+  --second-color1:#7F7FED;
+}
+
 /* ======== Reset ======== */
 * {
   margin: 0;
