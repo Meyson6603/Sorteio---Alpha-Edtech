@@ -1,16 +1,14 @@
-let menuBtn = document.querySelector("#menu-btn");
+const menu_desktop = document.getElementById('menu_desktop');
+const menuToggle = document.getElementById('menuToggle');
 
-menuBtn.addEventListener("click", function (event) {
-  event.stopPropagation();
+menuToggle.addEventListener('click', () => {
+    menu_desktop.classList.toggle('collapsed');
+});
 
-  let mobileMenu = document.querySelector(".mobile-menu");
-  let key = "";
+const menu_mobile = document.getElementById('menu_mobile');
+const menuToggle_mobile = document.getElementById('menuToggle_mobile');
 
-  if (!mobileMenu.classList.contains("show")) {
-    key = "add";
-  } else {
-    key = "remove";
-  }
-
-  mobileMenu.classList[key]("show");
+menuToggle_mobile.addEventListener('click', () => {
+    console.log("Entrei")
+    menu_mobile.classList.toggle('collapsed');
 });
