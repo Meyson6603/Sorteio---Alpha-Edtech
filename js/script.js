@@ -1,3 +1,5 @@
+import inicio from "./inicio.js";
+
 const menu_desktop = document.getElementById('menu_desktop');
 const menuToggle = document.getElementById('menuToggle');
 
@@ -12,3 +14,7 @@ menuToggle_mobile.addEventListener('click', () => {
     console.log("Entrei")
     menu_mobile.classList.toggle('collapsed');
 });
+
+const single_page = document.getElementById("single-page")
+
+single_page.appendChild(inicio())
