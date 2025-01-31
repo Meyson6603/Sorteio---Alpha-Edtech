@@ -2,6 +2,7 @@ import information from "./information.js";
 import inicio from "./inicio.js";
 import roleta from "./roleta.js";
 import Historico from "./historico.js";
+import { createDiceContainer } from "./dados.js";
 
 
 const menu_desktop = document.getElementById('menu_desktop');
@@ -28,8 +29,6 @@ const informationDesktop = document.getElementById('informationDesktop')
 const informationMobile = document.getElementById('informationMobile')
 const historyDesktop = document.getElementById('historyDesktop')
 const historyMobile = document.getElementById('historyMobile')
-const settingsDesktop = document.getElementById('settingsDesktop')
-const settingsMobile = document.getElementById('settingsMobile')
 
 
 window.addEventListener('load', () => {
@@ -39,6 +38,12 @@ window.addEventListener('load', () => {
     option01.addEventListener('click', () => {
         single_page.innerHTML = ''
         single_page.append(roleta())
+    })
+    const option02 = document.getElementsByClassName('inicio__opcao_item')[2]
+    option02.addEventListener('click', () => {
+        console.log("sadsadsada")
+        single_page.innerHTML = ""
+        single_page.appendChild(createDiceContainer())
     })
 })
 homeDesktop.addEventListener('click', () => {
@@ -51,6 +56,12 @@ homeDesktop.addEventListener('click', () => {
         single_page.innerHTML = ''
         single_page.append(roleta())
     })
+    const option02 = document.getElementsByClassName('inicio__opcao_item')[2]
+    option02.addEventListener('click', () => {
+        console.log("asdsadas")
+        single_page.innerHTML = ""
+        single_page.appendChild(createDiceContainer())
+    })
 })
 homeMobile.addEventListener('click', () => {
     single_page.innerHTML = ''
@@ -60,6 +71,13 @@ homeMobile.addEventListener('click', () => {
     const option01 = document.getElementsByClassName('inicio__opcao_item')[0]
     option01.addEventListener('click', () => {
         roleta()
+    })
+    
+    const option02 = document.getElementsByClassName('inicio__opcao_item')[2]
+    option02.addEventListener('click', () => {
+        console.log("sadsadsada")
+        single_page.innerHTML = ""
+        single_page.appendChild(createDiceContainer())
     })
 })
 informationDesktop.addEventListener('click', () => {
@@ -73,9 +91,7 @@ historyDesktop.addEventListener('click', () => {
     single_page.appendChild(Historico())
     main.style.alignItems = 'center'
 })
-settingsDesktop.addEventListener('click', () => {
-    single_page.innerHTML = 'Configurar Modo Nortuno'
-})
+
 informationMobile.addEventListener('click', () => {
     single_page.innerHTML = ''
     single_page.appendChild(information())
@@ -85,7 +101,4 @@ historyMobile.addEventListener('click', () => {
     single_page.innerHTML = ''
     single_page.appendChild(Historico())
     main.style.alignItems = 'center'
-})
-settingsMobile.addEventListener('click', () => {
-    single_page.innerHTML = 'Configurar Modo Nortuno'
 })

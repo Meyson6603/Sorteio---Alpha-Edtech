@@ -61,7 +61,7 @@ const desenharRoleta = (svg, itens) => {
   
       // Adicionar texto
       const anguloTexto = anguloInicio + anguloIncremento / 2;
-      const textoRaio = raio - 150;
+      const textoRaio = Math.min(raio - 35, 50 + total * 5);
       const textoX =
         centro + textoRaio * Math.cos(-(Math.PI / 180) * anguloTexto);
       const textoY =
@@ -70,13 +70,14 @@ const desenharRoleta = (svg, itens) => {
       const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
       text.setAttribute("x", textoX);
       text.setAttribute("y", textoY);
-      text.setAttribute("font-size", "30");
+      text.setAttribute("font-size", `${Math.max(8, 30 - total * 2)}`);
+      text.setAttribute("dominant-baseline", "middle")
       text.setAttribute(
         "transform",
         `rotate(${-anguloTexto}, ${textoX}, ${textoY})`
       ); // Rotacionar texto
       text.setAttribute("fill", "white");
-      text.textContent = item.trim();
+      text.textContent = item.trim().length > 8 ? item.trim().substring(0, 7) + "..." : item.trim();
       svg.appendChild(text);
     });
   };
@@ -184,38 +185,4 @@ const desenharRoleta = (svg, itens) => {
     return roletaConteiner;
   }
   
-  // const entrada = document.getElementById("entrada");
-  // const atualizar = document.getElementById("atualizar");
-  // const girar = document.getElementById("girar");
-  // const svg = document.getElementById("roleta");
-  // const coresHarmonicas = ["blue", "red", "green", "yellow", "purple", "orange", "cyan", "magenta", "lime", "pink", "teal", "brown"];
-  
-  // let lista = ["Exemplo 1", "Exemplo 2", "Exemplo 3", "Exemplo 4"];
-  
-  // entrada.addEventListener("input", () => {
-  //     lista = entrada.value.split(/[\n,]+/).filter(palavra => palavra.trim().length > 0);
-  //     if (lista.length > 0) {
-  //         desenharRoleta(lista);
-  //     }
-  // });
-  // let anguloTotal = 0
-  // const girarRoleta = () => {
-  //     console.log(anguloTotal)
-  //     const duracao = 10000; // Duração da rotação em milissegundos
-  //     const rotacoes = 15 + Math.random() * 10;
-  //     const anguloSorteado = Math.floor(Math.random() * 360)
-  
-  //     const anguloFinal = 360 * rotacoes + anguloSorteado;
-  
-  //     anguloTotal += 0 * 360 + anguloFinal; // Ângulo total de rotação
-  //     console.log(`Ganhador: ${Math.floor((anguloTotal % 360) / (360 / lista.length)) + 1}`)
-  
-  //     svg.style.transition = `transform ${duracao}ms ease`;
-  //     svg.style.transform = `rotate(${anguloTotal}deg)`;
-  
-  // };
-  
-  // girar.addEventListener("click", girarRoleta);
-  
-  // // Desenhar roleta inicial
-  
+ 
