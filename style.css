@@ -1,26 +1,26 @@
 /* ===== Variáveis ===== */
 
 :root {
-  --bg-color1: #FFFFFF;
+  --bg-color1: #ffffff;
   --bg-color2: #202020;
-  --bg-color3: #EEEEEE;
+  --bg-color3: #eeeeee;
 
-  --font-color1: #FFFFFF;
+  --font-color1: #ffffff;
   --font-color2: #202020;
-  --font-color3: #EEEEEE;
+  --font-color3: #eeeeee;
 
-  --primary-color1: #4DCCA7;
-  --primary-color2: #00996D;
-  --primary-color3: #2DACE2;
-  --primary-color4: #EBBA3D;
-  --primary-color5: #E5646E;
-  --primary-color6: #9A40B9;
+  --primary-color1: #4dcca7;
+  --primary-color2: #00996d;
+  --primary-color3: #2dace2;
+  --primary-color4: #ebba3d;
+  --primary-color5: #e5646e;
+  --primary-color6: #9a40b9;
 
   --second-color1: #777777;
-  --second-color2: #86BCAB;
+  --second-color2: #86bcab;
   --second-color3: #171717;
-  --second-color4: #0C5039;
-  --second-color5: #7F7FED;
+  --second-color4: #0c5039;
+  --second-color5: #7f7fed;
 }
 
 * {
@@ -100,13 +100,11 @@ body {
   width: calc(100% - 30px);
   text-align: left;
   font-weight: 400;
-
 }
 
 .menu_desktop.collapsed .menu__item_text {
   display: none;
 }
-
 
 .menu_desktop.collapsed .menu__item_main .menu__item_img.leaf {
   display: none;
@@ -150,7 +148,6 @@ main {
   display: flex;
   border-radius: 30px;
   overflow: hidden;
-
 }
 
 .inicio__apresentacao {
@@ -221,7 +218,7 @@ main {
   transition: transform 0.5s ease;
 }
 
-.inicio__opcao_item:nth-child(-n+2)::after {
+.inicio__opcao_item:nth-child(-n + 2)::after {
   content: "";
   display: block;
   width: 100%;
@@ -240,9 +237,7 @@ main {
   min-width: 150px;
   font-size: 18px;
   font-weight: bold;
-
 }
-
 
 .inicio__opcao_item_content {
   width: 70%;
@@ -256,9 +251,7 @@ main {
   transform: scale(1.1);
 }
 
-
-@media (max-width:1000px) {
-
+@media (max-width: 1000px) {
   main {
     margin-top: 20px;
     height: auto;
@@ -277,7 +270,6 @@ main {
   }
 
   .inicio__apresentacao_header_img {
-
     width: 40px;
     height: 40px;
   }
@@ -302,9 +294,7 @@ main {
   }
 }
 
-
 @media (max-width: 1000px) {
-
   main {
     height: calc(100vh - 80px);
   }
@@ -353,27 +343,25 @@ main {
   .menu__item_main {
     width: 80%;
   }
-
 }
 
 .roleta {
-  width:80%;
+  width: 80%;
   display: flex;
   align-items: center;
 }
 
-#girar{
-
+#girar {
   margin-top: 50px;
-  background-color: #2DACE2;
-  color:white;
+  background-color: #2dace2;
+  color: white;
   height: 15%;
   border: 15%;
-  font-size:20px;
+  font-size: 20px;
   font-weight: bold;
-  border:none;
+  border: none;
   border-radius: 10px;
-  padding:10px;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -384,8 +372,8 @@ main {
 #entrada {
   min-width: 300px;
   max-width: 300px;
-  height:100px;
-  border:3px solid var(--font-color2);
+  height: 100px;
+  border: 3px solid var(--font-color2);
   border-radius: 10px;
   padding: 5px;
 }
@@ -432,7 +420,6 @@ main {
 }
 
 #historico {
-
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   border-spacing: 0px;
@@ -441,9 +428,7 @@ main {
   overflow: hidden;
   /* background-color: black; */
   box-shadow: 0px 1px 5px rgb(68, 68, 68);
-
 }
-
 
 th.historico__item_coluna {
   background-color: rgb(1, 142, 86);
@@ -456,7 +441,6 @@ th.historico__item_coluna {
   background-color: rgb(255, 255, 255);
   padding: 10px;
 }
-
 
 .historico__item_linha:last-child td {
   border: none;
@@ -514,4 +498,129 @@ th.historico__item_coluna {
 
 #blocoVazio__botao:hover {
   background-color: rgb(9, 90, 141);
+}
+
+/* ----------------Dados ---------------- */
+
+/* ------- Estilos da Container ------- */
+.container {
+  margin-bottom: 20px;
+}
+
+/* ------- Estilos do Card ------- */
+.card {
+  background: white;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card button:hover {
+  background-color: #388e3c;
+}
+
+/* ------- Estilos de Dice ------- */
+#Dice {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#Dice label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#Dice input {
+  padding: 5px;
+  font-size: 16px;
+  width: 60px;
+  text-align: center;
+}
+
+/* ------- Estilos do Label e Botão de Sorteio ------- */
+#totalLabel {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#sortButton {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#sortButton:hover {
+  background-color: #388e3c;
+}
+
+/* ------- Estilos do Layout dos Dados ------- */
+.cardDice {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDice svg {
+  width: 80px;
+  height: 80px;
+  border: 0.5px solid black;
+}
+
+/* ------- Estilos do Botão de Aplicar ------- */
+#btnDiceCount {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#btnDiceCount:hover {
+  background-color: #1976d2;
+}
+
+/* ------- Estilos de Layout do Conteúdo ------- */
+#Dice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#totalLabel {
+  margin-bottom: 10px;
+}
+
+#sortButton {
+  margin-top: 10px;
 }

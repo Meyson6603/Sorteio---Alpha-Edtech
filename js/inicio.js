@@ -1,7 +1,10 @@
+import Roleta from "./roleta.js";
+import { createDiceContainer } from "./dados.js";
+
 export default function inicio() {
-    const inicio = document.createElement("div");
-    inicio.id = "inicio"
-    inicio.innerHTML = `
+  const inicio = document.createElement("div");
+  inicio.id = "inicio";
+  inicio.innerHTML = `
         <div class="inicio__apresentacao">
             <div class="inicio__apresentacao_header">
                 <img class="inicio__apresentacao_header_img" src="img/trevo.png" alt="Imagem">
@@ -32,6 +35,36 @@ export default function inicio() {
                 </div>
             </div>
         </div>
-    `
-    return inicio
+    `;
+
+  const singlePage = document.querySelector(".single_page");
+
+  const options = inicio.querySelectorAll(".inicio__opcao_item");
+
+  options.forEach((option, index) => {
+    option.addEventListener("click", () => {
+      opcoes(index);
+    });
+  });
+
+  function opcoes(index) {
+    singlePage.innerHTML = "";
+
+    switch (index) {
+      case 0:
+        singlePage.append(Roleta());
+        break;
+      case 1:
+        singlePage.append(numeros());
+        break;
+      case 2:
+        singlePage.append(createDiceContainer(singlePage));
+        inicio = "";
+        break;
+      default:
+        console.warn("Opção inválida.");
+    }
+  }
+
+  return inicio;
 }
