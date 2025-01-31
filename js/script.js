@@ -1,5 +1,7 @@
 import inicio from "./inicio.js";
 import roleta from "./roleta.js";
+import Historico from "./historico.js";
+
 
 const menu_desktop = document.getElementById('menu_desktop');
 const menuToggle = document.getElementById('menuToggle');
@@ -58,7 +60,8 @@ informationDesktop.addEventListener('click', () => {
     single_page.innerHTML = 'Local de Configuração'
 })
 historyDesktop.addEventListener('click', () => {
-    single_page.innerHTML = 'Historico de Sorteio'
+    single_page.innerHTML = ''
+    single_page.appendChild(Historico())
 })
 settingsDesktop.addEventListener('click', () => {
     single_page.innerHTML = 'Configurar Modo Nortuno'

@@ -62,7 +62,7 @@ function construirDados(dado){
 }
 
 
-function Historico(){
+export default function Historico(){
     
     const historico = document.createElement("table")
     historico.id = "historico"
@@ -117,6 +117,5 @@ function Historico(){
 
 
 
-document.getElementById("root").append(Historico())
 
 
