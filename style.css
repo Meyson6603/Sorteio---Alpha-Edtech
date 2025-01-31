@@ -358,23 +358,23 @@ main {
 }
 
 .roleta {
-  width:80%;
+  width: 80%;
   display: flex;
   align-items: center;
 }
 
-#girar{
+#girar {
 
   margin-top: 50px;
   background-color: #2DACE2;
-  color:white;
+  color: white;
   height: 15%;
   border: 15%;
-  font-size:20px;
+  font-size: 20px;
   font-weight: bold;
-  border:none;
+  border: none;
   border-radius: 10px;
-  padding:10px;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -384,9 +384,9 @@ main {
 
 #entrada {
   max-width: 200px;
-  width:100%;
-  max-height:100px;
-  border:3px solid var(--font-color2);
+  width: 100%;
+  max-height: 100px;
+  border: 3px solid var(--font-color2);
   border-radius: 10px;
   padding: 5px;
 }
@@ -401,22 +401,23 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
 }
 
 .loader {
-  width: 100%;
-  height: 100%;
+  width: 60vw;
+  height: 60vh;
   color: black;
-  font-size: 300px;
+  font-size: 200%;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 30px;
 }
 
 /* ---- Histórico ---- */
