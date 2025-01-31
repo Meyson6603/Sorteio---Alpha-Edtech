@@ -383,8 +383,9 @@ main {
 }
 
 #entrada {
-  max-width: 300px;
-  height:100px;
+  max-width: 200px;
+  width:100%;
+  max-height:100px;
   border:3px solid var(--font-color2);
   border-radius: 10px;
   padding: 5px;
@@ -513,4 +514,127 @@ th.historico__item_coluna {
 
 #blocoVazio__botao:hover {
   background-color: rgb(9, 90, 141);
+}
+
+/* ------- Estilos da Container ------- */
+.container {
+  margin-bottom: 20px;
+}
+
+/* ------- Estilos do Card ------- */
+.card {
+  background: white;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card button:hover {
+  background-color: #388e3c;
+}
+
+/* ------- Estilos de Dice ------- */
+#Dice {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#Dice label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#Dice input {
+  padding: 5px;
+  font-size: 16px;
+  width: 60px;
+  text-align: center;
+}
+
+/* ------- Estilos do Label e Botão de Sorteio ------- */
+#totalLabel {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#sortButton {
+  padding: 10px 15px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#sortButton:hover {
+  background-color: #388e3c;
+}
+
+/* ------- Estilos do Layout dos Dados ------- */
+.cardDice {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDice svg {
+  width: 80px;
+  height: 80px;
+  border: 0.5px solid black;
+}
+
+/* ------- Estilos do Botão de Aplicar ------- */
+#btnDiceCount {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#btnDiceCount:hover {
+  background-color: #1976d2;
+}
+
+/* ------- Estilos de Layout do Conteúdo ------- */
+#Dice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#totalLabel {
+  margin-bottom: 10px;
+}
+
+#sortButton {
+  margin-top: 10px;
 }
