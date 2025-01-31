@@ -1,4 +1,4 @@
-export default function inicio(){
+export default function inicio() {
     const inicio = document.createElement("div");
     inicio.id = "inicio"
     inicio.innerHTML = `
@@ -33,6 +33,5 @@ export default function inicio(){
             </div>
         </div>
     `
-
     return inicio
 }

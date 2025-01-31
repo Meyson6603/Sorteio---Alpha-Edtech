@@ -1,67 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/013/713/853/non_2x/lucky-clover-leaf-free-png.png" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://static.vecteezy.com/system/resources/previews/013/713/853/non_2x/lucky-clover-leaf-free-png.png"
+        type="image/x-icon">
     <title>Alpha Sorte</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
+    <div id="loadingModal" class="modal">
+        <div class="loader">teste</div>
+    </div>
     <header class="header">
-      <ul class="menu_desktop" id="menu_desktop">
-          <li class="menu__item_main" id="menuToggle">
-              <img src="svg/trevo.svg" class="menu__item_img leaf" alt="The image four-leaf">
-              <span class="menu__item_text">Alpha Sorte</span>
-              <img class="menu__item_img" src="svg/menu.svg" alt="The icon menu">
-          </li>
-          <li class="menu__item">
-              <img class="menu__item_img" src="svg/home.svg" alt="The icon home">
-              <span class="menu__item_text">Início</span>
-          </li>
-          <li class="menu__item">
-              <img class="menu__item_img" src="svg/info.svg" alt="The icon info">
-              <span class="menu__item_text">Informações</span>
-          </li>
-          <li class="menu__item">
-              <img class="menu__item_img" src="svg/history.svg" alt="The icon history">
-              <span class="menu__item_text">Histórico</span>
-          </li>
-          <li class="menu__item">
-              <img class="menu__item_img" src="svg/config.svg" alt="The icon config">
-              <span class="menu__item_text">Configurações</span>
-          </li>
-      </ul>
+        <ul class="menu_desktop collapsed" id="menu_desktop">
+            <li class="menu__item_main" id="menuToggle">
+                <img src="svg/trevo.svg" class="menu__item_img leaf" alt="The image four-leaf">
+                <span class="menu__item_text">Alpha Sorte</span>
+                <img class="menu__item_img" src="svg/menu.svg" alt="The icon menu">
+            </li>
+            <li class="menu__item" id="homeDesktop">
+                <img class="menu__item_img" src="svg/home.svg" alt="The icon home">
+                <span class="menu__item_text">Início</span>
+            </li>
+            <li class="menu__item" id="informationDesktop">
+                <img class="menu__item_img" src="svg/info.svg" alt="The icon info">
+                <span class="menu__item_text">Informações</span>
+            </li>
+            <li class="menu__item" id="historyDesktop">
+                <img class="menu__item_img" src="svg/history.svg" alt="The icon history">
+                <span class="menu__item_text">Histórico</span>
+            </li>
+            <li class="menu__item" id="settingsDesktop">
+                <img class="menu__item_img" src="svg/config.svg" alt="The icon config">
+                <span class="menu__item_text">Configurações</span>
+            </li>
+        </ul>
 
-      <ul class="menu_mobile" id="menu_mobile">
-          <li class="menu__item_main" id="menuToggle_mobile">
-              <img src="svg/trevo.svg" class="menu__item_img leaf" alt="The image four-leaf">
-              <span class="menu__item_text">Alpha Sorte</span>
-              <img class="menu__item_img" src="svg/menu.svg" alt="The icon menu">
-          </li>
-          <li class="menu__item">
-              <img class="menu__item_img" src="svg/home.svg" alt="The icon home">
-              <span class="menu__item_text">Início</span>
-          </li>
-          <li class="menu__item">
-              <img class="menu__item_img" src="svg/info.svg" alt="The icon info">
-              <span class="menu__item_text">Informações</span>
-          </li>
-          <li class="menu__item">
-              <img class="menu__item_img" src="svg/history.svg" alt="The icon history">
-              <span class="menu__item_text">Histórico</span>
-          </li>
-          <li class="menu__item">
-              <img class="menu__item_img" src="svg/config.svg" alt="The icon config">
-              <span class="menu__item_text">Configurações</span>
-          </li>
-      </ul>
-  </header>
+        <ul class="menu_mobile" id="menu_mobile">
+            <li class="menu__item_main" id="menuToggle_mobile">
+                <img src="svg/trevo.svg" class="menu__item_img leaf" alt="The image four-leaf">
+                <span class="menu__item_text">Alpha Sorte</span>
+                <img class="menu__item_img" src="svg/menu.svg" alt="The icon menu">
+            </li>
+            <li class="menu__item" id="homeMobile">
+                <img class="menu__item_img" src="svg/home.svg" alt="The icon home">
+                <span class="menu__item_text">Início</span>
+            </li>
+            <li class="menu__item" id="informationMobile">
+                <img class="menu__item_img" src="svg/info.svg" alt="The icon info">
+                <span class="menu__item_text">Informações</span>
+            </li>
+            <li class="menu__item" id="historyMobile">
+                <img class="menu__item_img" src="svg/history.svg" alt="The icon history">
+                <span class="menu__item_text">Histórico</span>
+            </li>
+            <li class="menu__item" id="settingsMobile">
+                <img class="menu__item_img" src="svg/config.svg" alt="The icon config">
+                <span class="menu__item_text">Configurações</span>
+            </li>
+        </ul>
+    </header>
 
-  <main>
-      <div class="single_page" id="single-page">
-  </main>
+    <main>
+        <div class="single_page" id="single-page">
+    </main>
     <script type="module" src="js/script.js"></script>
-  </body>
+</body>
 
 </html>
