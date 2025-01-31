@@ -357,8 +357,37 @@ main {
 }
 
 .roleta {
+  width:80%;
   display: flex;
   align-items: center;
+}
+
+#girar{
+
+  margin-top: 50px;
+  background-color: #2DACE2;
+  color:white;
+  height: 15%;
+  border: 15%;
+  font-size:20px;
+  font-weight: bold;
+  border:none;
+  border-radius: 10px;
+  padding:10px;
+  cursor: pointer;
+}
+
+#girar:hover {
+  background-color: #168abb;
+}
+
+#entrada {
+  min-width: 300px;
+  max-width: 300px;
+  height:100px;
+  border:3px solid var(--font-color2);
+  border-radius: 10px;
+  padding: 5px;
 }
 
 #svg {
