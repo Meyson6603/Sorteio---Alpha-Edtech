@@ -160,7 +160,17 @@ const desenharRoleta = (svg, itens) => {
       botao.style.background = 'gray'
       let nomeDoGanhador = loadingModal.querySelector('.loader')
 
+      const ganhador = girarRoleta(svg, lista)
       setTimeout(() => {
+        const data = new Date();
+
+        const novoDado = {"data":data.toISOString(), "ganhador":ganhador}
+        const dados = localStorage.getItem("historico") || "[]"
+
+        const novohistorico = JSON.parse(dados)
+        novohistorico.push(novoDado)
+        localStorage.setItem("historico", JSON.stringify(novohistorico))
+
         botao.style.background = 'black'
   
         botao.disabled = false
@@ -171,7 +181,7 @@ const desenharRoleta = (svg, itens) => {
             roleta.style.zIndex = 0
         })
       }, duracao);
-      nomeDoGanhador.innerHTML = `Ganhador: <br> ${girarRoleta(svg, lista)}`
+      nomeDoGanhador.innerHTML = `Ganhador: <br> ${ganhador}}`
       // console.log(indexGanhador);
     });
   
