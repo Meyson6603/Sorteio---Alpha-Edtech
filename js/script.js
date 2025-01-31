@@ -71,6 +71,7 @@ informationDesktop.addEventListener('click', () => {
 historyDesktop.addEventListener('click', () => {
     single_page.innerHTML = ''
     single_page.appendChild(Historico())
+    main.style.alignItems = 'center'
 })
 settingsDesktop.addEventListener('click', () => {
     single_page.innerHTML = 'Configurar Modo Nortuno'
@@ -83,6 +84,7 @@ informationMobile.addEventListener('click', () => {
 historyMobile.addEventListener('click', () => {
     single_page.innerHTML = ''
     single_page.appendChild(Historico())
+    main.style.alignItems = 'center'
 })
 settingsMobile.addEventListener('click', () => {
     single_page.innerHTML = 'Configurar Modo Nortuno'
