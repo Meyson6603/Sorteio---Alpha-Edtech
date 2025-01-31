@@ -1,3 +1,4 @@
+import information from "./information.js";
 import inicio from "./inicio.js";
 import roleta from "./roleta.js";
 import Historico from "./historico.js";
@@ -18,6 +19,8 @@ menuToggle_mobile.addEventListener('click', () => {
     menu_mobile.classList.toggle('collapsed');
 });
 
+const main = document.querySelector('main')
+// console.log(main)
 const single_page = document.getElementById("single-page")
 const homeDesktop = document.getElementById('homeDesktop')
 const homeMobile = document.getElementById('homeMobile')
@@ -41,6 +44,7 @@ window.addEventListener('load', () => {
 homeDesktop.addEventListener('click', () => {
     single_page.innerHTML = ''
     single_page.appendChild(inicio())
+    main.style.alignItems = 'center'
 
     const option01 = document.getElementsByClassName('inicio__opcao_item')[0]
     option01.addEventListener('click', () => {
@@ -51,13 +55,18 @@ homeDesktop.addEventListener('click', () => {
 homeMobile.addEventListener('click', () => {
     single_page.innerHTML = ''
     single_page.appendChild(inicio())
+    main.style.alignItems = 'center'
+
     const option01 = document.getElementsByClassName('inicio__opcao_item')[0]
     option01.addEventListener('click', () => {
         roleta()
     })
 })
 informationDesktop.addEventListener('click', () => {
-    single_page.innerHTML = 'Local de Configuração'
+    single_page.innerHTML = ''
+    single_page.appendChild(information())
+    main.style.alignItems = 'start'
+
 })
 historyDesktop.addEventListener('click', () => {
     single_page.innerHTML = ''
@@ -67,7 +76,9 @@ settingsDesktop.addEventListener('click', () => {
     single_page.innerHTML = 'Configurar Modo Nortuno'
 })
 informationMobile.addEventListener('click', () => {
-    single_page.innerHTML = 'Local de Configuração'
+    single_page.innerHTML = ''
+    single_page.appendChild(information())
+    main.style.alignItems = 'start'
 })
 historyMobile.addEventListener('click', () => {
     single_page.innerHTML = ''
