@@ -97,8 +97,8 @@ export default function Historico() {
 
     if (dados.length === 0) {
         blocoHistorico.innerHTML = `
-        <div id="blocoVazio">        
-            <h1>Histórico Sorteio</h1>
+        <div id="blocoVazio" >        
+            <h1 style='margin-top: 30px'>Histórico Sorteio</h1>
             <span class="blocoVazio__mensagem">Não há nenhum registro salvo.</span>
         </div>
         `
@@ -108,7 +108,7 @@ export default function Historico() {
 
 
     blocoHistorico.innerHTML = `
-        <h1>Histórico Sorteio</h1>
+        <h1 style='margin-top: 30px'>Histórico Sorteio</h1>
     `
 
     const botaoResetar = document.createElement("button");
@@ -124,7 +124,7 @@ export default function Historico() {
         blocoVazio.id = "blocoVazio"
 
         blocoVazio.innerHTML = `
-            <h1>Histórico Sorteio</h1>
+            <h1 style='margin-top: 30px'>Histórico Sorteio</h1>
             <span class="blocoVazio__mensagem">Não há nenhum registro salvo.</span>
         `
 

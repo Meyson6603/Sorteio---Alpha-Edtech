@@ -70,9 +70,10 @@ homeMobile.addEventListener('click', () => {
 
     const option01 = document.getElementsByClassName('inicio__opcao_item')[0]
     option01.addEventListener('click', () => {
-        roleta()
+        single_page.innerHTML = ''
+        single_page.append(roleta())
     })
-    
+
     const option02 = document.getElementsByClassName('inicio__opcao_item')[2]
     option02.addEventListener('click', () => {
         console.log("sadsadsada")
@@ -89,7 +90,7 @@ informationDesktop.addEventListener('click', () => {
 historyDesktop.addEventListener('click', () => {
     single_page.innerHTML = ''
     single_page.appendChild(Historico())
-    main.style.alignItems = 'center'
+    main.style.alignItems = 'start'
 })
 
 informationMobile.addEventListener('click', () => {
