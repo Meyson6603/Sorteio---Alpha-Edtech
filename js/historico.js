@@ -1,3 +1,6 @@
+import inicio from "./inicio.js";
+import roleta from "./roleta.js";
+
 // Simulação do Local Storage
 const dados = [
     {
@@ -77,6 +80,9 @@ export default function Historico(){
         </tr>
     ` 
     
+    const dados = JSON.parse(localStorage.getItem("historico")) || []
+    console.log(dados)
+
     dados.forEach(dado => {
         corpoTabela.appendChild(construirDados(dado))
     });
@@ -86,6 +92,17 @@ export default function Historico(){
     
     
     const blocoHistorico = document.createElement("div");
+
+    if(dados.length === 0){
+        blocoHistorico.innerHTML = `
+        <div id="blocoVazio">        
+            <h1>Histórico Sorteio</h1>
+            <span class="blocoVazio__mensagem">Não há nenhum registro salvo.</span>
+        </div>
+        `
+        return blocoHistorico
+    }
+
     blocoHistorico.id = "blocoHistorico"
 
     blocoHistorico.innerHTML = `
@@ -97,17 +114,31 @@ export default function Historico(){
     
     botaoResetar.innerText = "Resetar Histórico"
     
+
+    
+
     botaoResetar.addEventListener("click", function(){
-        blocoHistorico.innerHTML = `
-            <div id="blocoVazio">
-                <h1>Histórico Sorteio</h1>
-                <span class="blocoVazio__mensagem">Não há nenhum registro salvo.</span>
-                <button id="botaoVazio__botao">Voltar pro Início</button>    
-            </div>
+        const blocoVazio = document.createElement("div");
+        blocoVazio.id = "blocoVazio"
+
+        blocoVazio.innerHTML = `
+            <h1>Histórico Sorteio</h1>
+            <span class="blocoVazio__mensagem">Não há nenhum registro salvo.</span>
         `
+
+        blocoHistorico.innerHTML = ""
+        blocoHistorico.appendChild(blocoVazio);
         localStorage.setItem("historico", "[]")
         botaoResetar.remove();
     });
+
+    const botaoVolta = blocoHistorico.querySelector("#botaoVazio__botao")
+
+    if(botaoVolta){
+        botaoVolta.addEventListener("click", function(){
+            console.log("Entrei");
+        }); 
+    }
 
     blocoHistorico.appendChild(historico)
     blocoHistorico.appendChild(botaoResetar)

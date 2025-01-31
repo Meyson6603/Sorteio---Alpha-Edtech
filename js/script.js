@@ -70,7 +70,8 @@ informationMobile.addEventListener('click', () => {
     single_page.innerHTML = 'Local de Configuração'
 })
 historyMobile.addEventListener('click', () => {
-    single_page.innerHTML = 'Historico de Sorteio'
+    single_page.innerHTML = ''
+    single_page.appendChild(Historico())
 })
 settingsMobile.addEventListener('click', () => {
     single_page.innerHTML = 'Configurar Modo Nortuno'
