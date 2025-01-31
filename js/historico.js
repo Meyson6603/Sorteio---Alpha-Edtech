@@ -50,7 +50,7 @@ const dados = [
 ];
 
 
-function construirDados(dado){
+function construirDados(dado) {
     const bloco = document.createElement("tr");
     const dataSorteio = new Date(dado.data).toLocaleString("pt-br").split(",")
 
@@ -65,35 +65,37 @@ function construirDados(dado){
 }
 
 
-export default function Historico(){
-    
+export default function Historico() {
+
     const historico = document.createElement("table")
     historico.id = "historico"
-    
+
     const corpoTabela = document.createElement("tbody")
-    
-    corpoTabela.innerHTML =  `
+
+    corpoTabela.innerHTML = `
         <tr class="historico__item_linha">
             <th class="historico__item_coluna">Nome</th>
             <th class="historico__item_coluna">Data</th>
             <th class="historico__item_coluna">Hora</th>
         </tr>
-    ` 
-    
+    `
+
     const dados = JSON.parse(localStorage.getItem("historico")) || []
     console.log(dados)
 
     dados.forEach(dado => {
         corpoTabela.appendChild(construirDados(dado))
     });
-    
-    historico.appendChild(corpoTabela)
-    
-    
-    
-    const blocoHistorico = document.createElement("div");
 
-    if(dados.length === 0){
+    historico.appendChild(corpoTabela)
+
+
+
+    const blocoHistorico = document.createElement("div");
+    blocoHistorico.id = "blocoHistorico"
+
+
+    if (dados.length === 0) {
         blocoHistorico.innerHTML = `
         <div id="blocoVazio">        
             <h1>Histórico Sorteio</h1>
@@ -103,21 +105,21 @@ export default function Historico(){
         return blocoHistorico
     }
 
-    blocoHistorico.id = "blocoHistorico"
+
 
     blocoHistorico.innerHTML = `
         <h1>Histórico Sorteio</h1>
     `
-    
+
     const botaoResetar = document.createElement("button");
     botaoResetar.id = "botaoResetar"
-    
+
     botaoResetar.innerText = "Resetar Histórico"
-    
 
-    
 
-    botaoResetar.addEventListener("click", function(){
+
+
+    botaoResetar.addEventListener("click", function () {
         const blocoVazio = document.createElement("div");
         blocoVazio.id = "blocoVazio"
 
@@ -134,15 +136,15 @@ export default function Historico(){
 
     const botaoVolta = blocoHistorico.querySelector("#botaoVazio__botao")
 
-    if(botaoVolta){
-        botaoVolta.addEventListener("click", function(){
+    if (botaoVolta) {
+        botaoVolta.addEventListener("click", function () {
             console.log("Entrei");
-        }); 
+        });
     }
 
     blocoHistorico.appendChild(historico)
     blocoHistorico.appendChild(botaoResetar)
-    
+
     return blocoHistorico
 }
 

@@ -6,8 +6,8 @@ export default function information() {
     div.style.alignItems = 'center'
     div.style.borderRadius = '30px'
     div.style.marginTop = '30px'
-    div.innerHTML = `<div class="inicio__apresentacao" style= 'width: 100%'>
-            <div class="inicio__apresentacao_header" style='text-align: center;'S>
+    div.innerHTML = `<div class="inicio__apresentacao" style= 'width: 100%;'>
+            <div class="inicio__apresentacao_header" style='text-align: center;'>
                 <img class="inicio__apresentacao_header_img" src="img/trevo.png" alt="Imagem">
                 <h1 class="inicio__apresentacao_header_text">Alpha Sorte</h1>
             </div>
