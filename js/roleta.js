@@ -2,19 +2,21 @@ const desenharRoleta = (svg, itens) => {
     // Limpar o SVG
     svg.innerHTML = "";
     const coresHarmonicas = [
-      "blue",
-      "red",
-      "green",
-      "yellow",
-      "purple",
-      "orange",
-      "cyan",
-      "magenta",
-      "lime",
-      "pink",
-      "teal",
-      "brown",
-    ];
+      "dodgerblue",
+      "crimson",
+      "forestgreen",
+      "goldenrod",
+      "rebeccapurple",
+      "darkorange",
+      "darkcyan",
+      "darkmagenta",
+      "darkolivegreen",
+      "deeppink",
+      "darkslategray",
+      "saddlebrown"
+  ];
+
+
     const total = itens.length;
     const centro = 200; // Centro do SVG (400x400)
     const raio = 200; // Raio do círculo
@@ -73,7 +75,7 @@ const desenharRoleta = (svg, itens) => {
         "transform",
         `rotate(${-anguloTexto}, ${textoX}, ${textoY})`
       ); // Rotacionar texto
-      text.setAttribute("fill", "black");
+      text.setAttribute("fill", "white");
       text.textContent = item.trim();
       svg.appendChild(text);
     });
@@ -119,7 +121,7 @@ const desenharRoleta = (svg, itens) => {
           </div>
           <div class="inicio__opcao">
               <div class="roleta">
-              <svg id="svg" width="200" height="200" viewBox="0 0 400 400"></svg>
+              <svg id="svg" viewBox="0 0 400 400"></svg>
               <svg id="seta" width="20" height="30"><polygon class="seta" points="2,15 12,25, 12,5" stroke="black" fill="black"/></svg>
           </div>
           </div>
@@ -144,13 +146,7 @@ const desenharRoleta = (svg, itens) => {
   
     const botao = roletaConteiner.querySelector("#girar");
   
-    botao.style.marginTop = '30px'
-    botao.style.background = 'black'
-    botao.style.color = 'white'
-    botao.style.width = '80%'
-    botao.style.height = '15%'
-    botao.style.borderRadius = '30px'
-    botao.style.fontSize = '30px'
+
     console.log(botao);
     botao.addEventListener("click", function () {
       // console.log("Gira gira, vai pomba gira")
@@ -171,7 +167,7 @@ const desenharRoleta = (svg, itens) => {
         novohistorico.push(novoDado)
         localStorage.setItem("historico", JSON.stringify(novohistorico))
 
-        botao.style.background = 'black'
+        botao.style.background = '#2DACE2'
   
         botao.disabled = false
         loadingModal.style.display = 'flex';
